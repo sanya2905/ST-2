@@ -13,6 +13,7 @@ class Circle {
     double area;
 
  public:
+    explicit Circle(double r);
     void setRadius(double r);
     void setFerence(double f);
     void setArea(double a);
