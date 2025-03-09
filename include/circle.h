@@ -7,13 +7,13 @@
 const double PI = 3.14159265358979323846264;
 
 class Circle {
-private:
-     double radius;
+ private:
+    double radius;
     double ference;
     double area;
 
-public:
-     void setRadius(double r);
+ public:
+    void setRadius(double r);
     void setFerence(double f);
     void setArea(double a);
 
