@@ -6,7 +6,7 @@ double EarthAndRope(double earthRadius, double addedLength) {
     Circle earth(earthRadius*1000);
 
     double initialFerence = earth.getFerence();
-    earth.setFerence(initialFerence + 1.0);
+    earth.setFerence(initialFerence + addedLength);
 
     double gap = earth.getRadius() - (earthRadius * 1000);
     return gap;

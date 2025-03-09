@@ -35,7 +35,7 @@ TEST(CircleTest, SetRadiusPositive4) {
 }
 
 TEST(CircleTest, SetRadiusNegative5) {
-    Circle c(1.0);
+    Circle c(5.0);
     c.setRadius(-1.0);
     EXPECT_NEAR(c.getRadius(), 5.0, 1e-6);
 }
@@ -49,7 +49,7 @@ TEST(CircleTest, SetFerencePositive6) {
 }
 
 TEST(CircleTest, SetFerenceNegative7) {
-    Circle c(1.0);
+    Circle c(5.0);
     c.setFerence(-10.0);
     EXPECT_NEAR(c.getRadius(), 5.0, 1e-6);
 }
