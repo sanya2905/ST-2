@@ -4,8 +4,8 @@
 #define INCLUDE_TASKS_H_
 #include "circle.h"
 
-double EarthAndRope();
+double earthAndRope();
 
-double Pool();
+double pool();
 
 #endif // INCLUDE_TASKS_H_

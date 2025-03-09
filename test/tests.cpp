@@ -6,7 +6,7 @@
 #include "tasks.h"
 
 TEST(CircleTest, SetRadiusPositive) {
-    Circle c(1.0);
+    Circle c;
     c.setRadius(10.0);
     EXPECT_NEAR(c.getRadius(), 10.0, 1e-6);
     EXPECT_NEAR(c.getFerence(), 2 * PI * 10.0, 1e-6);
@@ -14,13 +14,13 @@ TEST(CircleTest, SetRadiusPositive) {
 }
 
 TEST(CircleTest, SetRadiusNegative) {
-    Circle c(5.0);
+    Circle c;
     c.setRadius(-1.0);
     EXPECT_NEAR(c.getRadius(), 5.0, 1e-6);
 }
 
 TEST(CircleTest, SetFerencePositive) {
-    Circle c(1.0);
+    Circle c;
     c.setFerence(2 * PI * 2.0);
     EXPECT_NEAR(c.getRadius(), 2.0, 1e-6);
     EXPECT_NEAR(c.getFerence(), 2 * PI * 2.0, 1e-6);
@@ -28,13 +28,13 @@ TEST(CircleTest, SetFerencePositive) {
 }
 
 TEST(CircleTest, SetFerenceNegative) {
-    Circle c(5.0);
+    Circle c;
     c.setFerence(-10.0);
     EXPECT_NEAR(c.getRadius(), 5.0, 1e-6);
 }
 
 TEST(CircleTest, SetAreaPositive) {
-    Circle c(1.0);
+    Circle c;
     c.setArea(PI * 25.0);
     EXPECT_NEAR(c.getRadius(), 5.0, 1e-6);
     EXPECT_NEAR(c.getFerence(), 2 * PI * 5.0, 1e-6);
@@ -60,7 +60,6 @@ TEST(EarthAndRopeTest, ZeroRadius) {
     double gap = earthAndRope(0.0, 1.0);
     EXPECT_NEAR(gap, 1.0 / (2 * PI), 1e-6);
 }
-
 
 TEST(EarthAndRopeTest, ZeroAddedLength) {
     double gap = earthAndRope(6378.1, 0.0);

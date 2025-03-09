@@ -2,7 +2,7 @@
 #include "circle.h"
 #include "tasks.h"
 
-double EarthAndRope() {
+double earthAndRope() {
     Circle earth;
     earth.setRadius(6378100.0);
     double initialFerence = earth.getFerence();
@@ -12,7 +12,7 @@ double EarthAndRope() {
     return gap;
 }
 
-double Pool() {
+double pool() {
     Circle pool;
     pool.setRadius(3.0);
     double poolArea = pool.getArea();
