@@ -8,8 +8,7 @@ Circle::Circle(double r) {
         radius = r;
         ference = 2 * PI * radius;
         area = PI * radius * radius;
-    }
-    else {
+    } else {
         radius = 0;
         ference = 0;
         area = 0;
