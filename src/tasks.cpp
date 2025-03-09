@@ -2,29 +2,29 @@
 #include "circle.h"
 #include "tasks.h"
 
-double earthAndRope() {
-    Circle earth;
-    earth.setRadius(6378100.0);
+double EarthAndRope(double earthRadius, double addedLength) {
+    Circle earth(earthRadius*1000);
+
     double initialFerence = earth.getFerence();
     earth.setFerence(initialFerence + 1.0);
 
-    double gap = earth.getRadius() - 6378100.0;
+    double gap = earth.getRadius() - (earthRadius * 1000);
     return gap;
 }
 
-double pool() {
-    Circle pool;
-    pool.setRadius(3.0);
+double Pool(double poolRadius, double roadWidth,
+    double concreteCost, double fenceCost) {
+
+    Circle pool(poolRadius);
     double poolArea = pool.getArea();
 
-    Circle outer;
-    outer.setRadius(4.0);
+    Circle outer(poolRadius + roadWidth);
     double outerArea = outer.getArea();
     double outerFerence = outer.getFerence();
 
-    double walkwayCost = (outerArea - poolArea) * 1000.0;
-    double fenceCost = outerFerence * 2000.0;
-    double finalCost = walkwayCost + fenceCost;
+    double finalRoadCost = (outerArea - poolArea) * concreteCost;
+    double finalFenceCost = outerFerence * fenceCost;
+    double finalCost = finalRoadCost + finalFenceCost;
 
     return finalCost;
 }

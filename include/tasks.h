@@ -4,8 +4,9 @@
 #define INCLUDE_TASKS_H_
 #include "circle.h"
 
-double earthAndRope();
+double EarthAndRope(double earthRadius, double addedLength);
 
-double pool();
+double Pool(double poolRadius, double walkwayWidth,
+    double concreteCost, double fenceCost);
 
 #endif // INCLUDE_TASKS_H_

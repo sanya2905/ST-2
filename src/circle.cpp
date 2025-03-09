@@ -3,6 +3,19 @@
 
 #include <cmath>
 
+Circle::Circle(double r) {
+    if (r >= 0) {
+        radius = r;
+        ference = 2 * PI * radius;
+        area = PI * radius * radius;
+    }
+    else {
+        radius = 0;
+        ference = 0;
+        area = 0;
+    }
+}
+
 void Circle::setRadius(double r) {
     if (r >= 0) {
         radius = r;
